@@ -166,3 +166,11 @@ a.secondary {
     filter: invert();
   }
 }
+
+.homepage {
+  h2{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
