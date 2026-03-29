@@ -2,6 +2,7 @@ import { Open_Sans, Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
 
 const OpenSans = Open_Sans({
   variable: "--font-open-sans",
@@ -22,14 +23,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${OpenSans.variable} ${raleway.variable}`}>
-        
-        <Header />
+        <CartProvider>
 
-        <main>
-        {children}
-        </main>
-        
-        <Footer />
+          <Header />
+
+          <main>
+            {children}
+          </main>
+          
+          <Footer />
+
+        </CartProvider>
 
       </body>
     </html>

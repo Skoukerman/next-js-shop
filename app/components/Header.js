@@ -1,7 +1,8 @@
-import './header.module.css'
+'use client'
 import styles from './header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import CartCount from './CartCount'
 
 export default function Header() {
   return (
@@ -23,7 +24,12 @@ export default function Header() {
               <ul>
                 <Link href="/"><li>Home</li></Link>
                 <Link href="/products"><li>Products</li></Link>
-                <Link href="/basket"><li>Shopping Cart</li></Link>
+                <Link href="/cart">
+                  <li className={styles.basket}>
+                    Shopping Cart
+                    <CartCount/>
+                  </li>
+                </Link>
               </ul>
             </nav>
         </aside>

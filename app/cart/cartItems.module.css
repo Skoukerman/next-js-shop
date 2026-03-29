@@ -1,27 +1,21 @@
-.basket {
-
-    main {
-        padding: 60px 0; 
-    }
-
-    .shopping-bag-table {
+.shopping-bag-table {
         width: 100%;
         border-collapse: collapse;
       
-        th, td {
+        & th, & td {
           padding: 12px;
           text-align: center;
 
-          a {
+          & a {
             text-decoration: underline;
           }
         }
 
-        tr {
+        & tr {
             border: 1px solid var(--grey-color);
         }
 
-        th {
+        & th {
             background-color: var(--light-color);
             font-weight: bold;
         }
@@ -38,7 +32,7 @@
             }
         }
 
-        input, button.qty {
+        & input, button.qty {
             border: 1px solid var(--grey-color);
             outline: none;
             margin: 0;
@@ -50,7 +44,7 @@
             font-weight: 700;
           }
 
-        input {
+        & input {
             width: 48px;
             border-left: none;
             border-right: none;
@@ -65,7 +59,7 @@
         }
 
         .grand-total {
-            td {
+            & td {
                 text-align: right;
                 font-weight: bold; 
                 padding-right: 20px;
@@ -76,12 +70,12 @@
     .empty-basket {
         text-align: center;
 
-        h3 {
+        & h3 {
             font-size: 24px;
             margin-bottom: 12px;
         }
 
-        a {
+        & a {
             text-decoration: underline;
             color: var(--main-color);
         }
@@ -93,10 +87,7 @@
         padding: 30px;
         margin-top: 40px;
 
-        button {
+        & button {
             margin-left: 12px;
         }
     }
-
-      
-}
