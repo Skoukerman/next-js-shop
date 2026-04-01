@@ -1,23 +1,18 @@
 import styles from './products.module.css'
 import Link from 'next/link'
-import ProductCard from '../components/ProductCard'
+import { ErrorBoundary } from '../components/ErrorBoundary';
+import ProductsList from './ProductsList';
 
-export default async function Products() {
-    const data = await fetch('https://dummyjson.com/products?limit=12&sortBy=rating&order=desc')
-    const products = await data.json();
+export default function Products() {
      return (
         <div className={styles.products}>
 
             <div className={`${styles.wrapper} container `}>
                 <h2>Highest Rated Products</h2>
                 <p>Check out below a curated list of the products that received the highest ratings from  our customers</p>
-                <ul className={styles['products-list']}>
-                    {
-                        products.products.map(product=> (
-                            <ProductCard key={product.id} product={product} />
-                        ))
-                    }
-                </ul>
+                <ErrorBoundary fallback = "Could not load products.">
+                    <ProductsList/>
+                </ErrorBoundary>
                 <Link href="/products">
                     <button>View all products</button>
                 </Link>
