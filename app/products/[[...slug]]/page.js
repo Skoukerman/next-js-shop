@@ -1,4 +1,4 @@
-import Products from "../../util/Products"
+import Products from "./Products"
 import { ErrorBoundary } from "@/app/components/ErrorBoundary"
 
 
