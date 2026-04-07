@@ -4,7 +4,7 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 
 
 export default function Categories() {
-     return (
+    return (
         <div className={styles.categories}>
             <h2>Our Categories</h2>
             
@@ -12,5 +12,5 @@ export default function Categories() {
                 <CategoriesList/>
             </ErrorBoundary>
         </div>
-     )
+    )
 }

@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 import styles from './categoriesList.module.css'
 
 
@@ -9,9 +9,11 @@ export default async function CategoriesList() {
     return (
         <ul className={`${styles.wrapper} container `}>
             {categories.map(category=>(
-                <li key={category.slug} className={styles.category}>
-                    {category.name}
-                </li>
+                <Link key={category.slug} href={`/products/${category.slug}`}>
+                    <li  className={styles.category}>
+                        {category.name}
+                    </li>
+                </Link>
             ))}
         </ul>
     )

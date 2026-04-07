@@ -1,0 +1,19 @@
+import Products from "../../util/Products"
+import { ErrorBoundary } from "@/app/components/ErrorBoundary"
+
+
+export default function page({params}) {
+  const category = params.slug?.[0] || null;
+  return (
+    <div className="products-page">
+      <div className="page-header">
+        <h1>
+          Products page
+        </h1>
+      </div>
+      <ErrorBoundary fallback = "Could not load products, please refresh the page.">
+        <Products category={category} />
+      </ErrorBoundary>
+    </div>
+  )
+}

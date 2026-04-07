@@ -4,7 +4,7 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 import ProductsList from './ProductsList';
 
 export default function Products() {
-     return (
+    return (
         <div className={styles.products}>
 
             <div className={`${styles.wrapper} container `}>
@@ -18,5 +18,5 @@ export default function Products() {
                 </Link>
             </div>
         </div>
-     )
+    )
 }

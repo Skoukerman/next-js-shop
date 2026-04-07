@@ -1,5 +1,7 @@
 'use client'
 import * as React from 'react';
+import { Suspense } from 'react';
+import Loader from './Loader';
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +24,10 @@ export class ErrorBoundary extends React.Component {
       )
     }
 
-    return this.props.children;
+    return (
+      <Suspense fallback={<Loader/>}>
+        {this.props.children}
+      </Suspense>
+    ) 
   }
 }

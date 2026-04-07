@@ -146,3 +146,7 @@ button {
     66% {box-shadow: 15px 0 #0002,-15px 0 #000; background: #0002}
     100%{box-shadow: 15px 0 #0002,-15px 0 #000; background: #000 }
 }
+
+.products-page > .loader-wrapper{
+  margin-top: 60px;
+}
